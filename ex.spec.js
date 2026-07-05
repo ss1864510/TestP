@@ -4,4 +4,6 @@ test('homepage has correct title', async ({ page }) => {
   await page.goto('https://playwright.dev/');
 
   await expect(page).toHaveTitle(/Playwright/);
+  await expect(page).toHaveScreenshot('homepage.png',{fullPage:true});
+
 });
