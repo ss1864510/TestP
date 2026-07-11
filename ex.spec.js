@@ -8,4 +8,9 @@ test('homepage has correct title', async ({ page }) => {
   //await expect(page).toHaveScreenshot('homepage.png',{fullPage:true});
   await expect(page.getByText('Docs')).toBeVisible();
 //kk
+await page.screenshot({
+    path: 'homepage.png'
+}
+
+)
 });
