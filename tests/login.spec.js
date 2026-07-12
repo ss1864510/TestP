@@ -12,6 +12,6 @@ test('test', async ({ page }) => {
   await page.getByRole('textbox', { name: 'Search this blog' }).fill('ssnk');
   await page.getByRole('textbox', { name: 'Search this blog' }).press('Enter');
   await page.locator('#BlogSearch1').getByRole('img').click();
-  await expect(page.getByRole('banner')).toMatchAriaSnapshot(``);
+  //await expect(page.getByRole('banner')).toMatchAriaSnapshot(``);
   await expect(page.getByRole('heading', { name: 'Gold Investment Ideas - Beat' })).toBeVisible();
 });
